@@ -1,7 +1,8 @@
 # WRG-Projects
 
-White Rabbit Group Project
-Hi, This is my Project for Frontend Lead
+<h2>White Rabbit Group Project</h2>
+
+<div>Hi, This is my Project for Frontend Lead</div>
 
 # Plugins
 
