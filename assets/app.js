@@ -123,43 +123,25 @@ $(".MainPage section").each(function (i) {
             opacity: 1,
             y: 0
         });
-    var controller = new ScrollMagic.Controller({
-        globalSceneOptions: {
-            duration: 100
-        }
-    });
     new ScrollMagic.Scene({
             triggerElement: "#heroSection"
         })
-        .setClassToggle(".navigation a.home", "home") // add class toggle
-
+        .setClassToggle(".navigation a.home", "active") // add class toggle
     new ScrollMagic.Scene({
             triggerElement: "#services"
         })
-        .setClassToggle(".navigation a.services", "services") // add class toggle
-
+        .setClassToggle(".navigation a.services", "active") // add class toggle
     new ScrollMagic.Scene({
             triggerElement: "#about"
         })
-        .setClassToggle(".navigation a.about", "about") // add class toggle
-
-    new ScrollMagic.Scene({
-            triggerElement: "#work"
-        })
-        .setClassToggle(".navigation a.work", "work") // add class toggle
-
-    new ScrollMagic.Scene({
-            triggerElement: "#contacts"
-        })
-        .setClassToggle(".navigation a.contacts", "contacts") // add class toggle
+        .setClassToggle(".navigation a.about", "active") // add class toggle
         .addIndicators({
             colorTrigger: "white",
             colorStart: "white",
             colorEnd: "white",
-            indent: -100,
+            indent: 00,
             pushfollowers: true
         }) // add indicators (requires plugin)
-        .addTo(controller);
 
 
 
@@ -173,13 +155,13 @@ $(".MainPage section").each(function (i) {
             triggerHook: 0.80
         })
         .setTween(tb)
-        .addIndicators({
-            colorTrigger: "white",
-            colorStart: "white",
-            colorEnd: "white",
-            indent: -100,
-            pushfollowers: true
-        })
+        // .addIndicators({
+        //     colorTrigger: "white",
+        //     colorStart: "white",
+        //     colorEnd: "white",
+        //     indent: 00,
+        //     pushfollowers: true
+        // })
         .addTo(ctrl);
 });
 

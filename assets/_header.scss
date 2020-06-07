@@ -1,3 +1,10 @@
+$blue: #75b4aa;
+$darkpurple: #4c3f4b;
+$lightpurple: #a1859e;
+$red: #b24a50;
+$darkred: #c8535a;
+$green: #81a256;
+
 .headerSection {
     font-family: 'Lato';
     color: #FFF;
@@ -11,6 +18,8 @@
     top: 0;
     z-index: 99;
 
+
+
     .navbar-brand {
         color: #FFF;
         font-size: 5em;
@@ -18,9 +27,31 @@
         opacity: 0;
         padding-top: 0;
         line-height: normal;
+
+        @include mdmax {
+            font-size: 3em;
+        }
+
+
+    }
+
+    .hamburger-menu {
+        display: none;
+
+        @include mdmax {
+            display: inline;
+            text-align: right;
+            display: block;
+            float: right;
+            margin-top: 10px;
+            font-size: 20px;
+        }
     }
 
     .navigation {
+        @include mdmax {
+            display: none;
+        }
 
         ul,
         li {
@@ -44,7 +75,39 @@
                     background-color: #74c7d5;
                     text-decoration: none;
                 }
+
+                &.home {
+                    &.active {
+                        background-color: $red;
+                    }
+                }
+
+                &.services {
+                    &.active {
+                        background-color: $red;
+                    }
+                }
+
+                &.about {
+                    &.active {
+                        background-color: $darkpurple;
+                    }
+                }
+
+                &.work {
+                    &.active {
+                        background-color: $green;
+                    }
+
+                }
+
+                &.contacts {
+                    &.active {
+                        background-color: $blue;
+                    }
+                }
             }
+
 
         }
 

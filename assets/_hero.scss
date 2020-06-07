@@ -23,6 +23,15 @@ $blue: #74c7d5;
             position: relative;
             max-width: 830px;
 
+            @include mdmax {
+                display: block;
+                height: auto;
+            }
+
+            @include mdmax {
+                max-width: 100%;
+            }
+
             &:after {
                 content: "";
                 background-color: #FFF;
@@ -50,6 +59,13 @@ $blue: #74c7d5;
                 white-space: nowrap;
                 text-align: right;
                 line-height: 60px;
+
+                @include mdmax {
+                    font-size: 20px;
+                    z-index: 1;
+                    position: relative;
+                    line-height: normal;
+                }
             }
 
             .headline {
@@ -60,6 +76,14 @@ $blue: #74c7d5;
                 color: $blue;
                 z-index: 2;
                 font-weight: bolder;
+
+                @include mdmax {
+                    font-size: 40px;
+                    position: relative;
+                    line-height: normal;
+                    text-align: right;
+                    margin: 0;
+                }
 
             }
         }

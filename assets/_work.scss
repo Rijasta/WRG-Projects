@@ -39,6 +39,10 @@ $green: #81a256;
         font-size: 60pt;
         font-weight: lighter;
         text-transform: uppercase;
+
+        @include mdmax {
+            font-size: 30px;
+        }
     }
 
     .subtitle {
@@ -96,6 +100,16 @@ $green: #81a256;
         border-width: 1px 0;
         text-align: right;
         padding: 20px 0;
+
+        @include mdmax {
+            text-align: center;
+        }
+
+        .title {
+            @include mdmax {
+                margin-bottom: 10px;
+            }
+        }
     }
 
     .button-group:after {
@@ -135,6 +149,9 @@ $green: #81a256;
         color: #262524;
         border-radius: 5px;
 
+        @include mdmax {
+            height: 300px;
+        }
 
         .box {
             background: #FFF;
@@ -144,6 +161,10 @@ $green: #81a256;
             img {
                 max-width: 100%;
                 height: auto;
+
+                @include mdmax {
+                    width: 100%;
+                }
             }
 
             h4 {

@@ -39,6 +39,11 @@ $green: #81a256;
         font-size: 60pt;
         font-weight: lighter;
         text-transform: uppercase;
+
+        @include mdmax {
+            font-size: 30px;
+            ;
+        }
     }
 
     .subtitle {

@@ -38,6 +38,10 @@ $darkred: #c8535a;
         font-size: 60pt;
         font-weight: lighter;
         text-transform: uppercase;
+
+        @include mdmax {
+            font-size: 30px;
+        }
     }
 
     .subtitle {
@@ -74,6 +78,13 @@ $darkred: #c8535a;
                 margin-bottom: 20px;
                 overflow: hidden;
                 color: $darkpurple;
+
+                @include mdmax {
+                    font-size: 46px;
+                    width: 80px;
+                    height: 80px;
+                    padding: 10px;
+                }
             }
 
             &:hover {

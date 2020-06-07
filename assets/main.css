@@ -359,9 +359,36 @@ body {
   line-height: normal;
 }
 
+@media screen and (max-width: 992px) {
+  .headerSection .navbar-brand {
+    font-size: 3em;
+  }
+}
+
+.headerSection .hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .headerSection .hamburger-menu {
+    display: inline;
+    text-align: right;
+    display: block;
+    float: right;
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
 .headerSection .navigation {
   font-size: 18px !important;
   font-size: 18em;
+}
+
+@media screen and (max-width: 992px) {
+  .headerSection .navigation {
+    display: none;
+  }
 }
 
 .headerSection .navigation ul,
@@ -383,6 +410,26 @@ body {
 .headerSection .navigation li a:hover, .headerSection .navigation li a.active {
   background-color: #74c7d5;
   text-decoration: none;
+}
+
+.headerSection .navigation li a.home.active {
+  background-color: #b24a50;
+}
+
+.headerSection .navigation li a.services.active {
+  background-color: #b24a50;
+}
+
+.headerSection .navigation li a.about.active {
+  background-color: #4c3f4b;
+}
+
+.headerSection .navigation li a.work.active {
+  background-color: #81a256;
+}
+
+.headerSection .navigation li a.contacts.active {
+  background-color: #75b4aa;
 }
 
 #heroSection {
@@ -424,6 +471,19 @@ body {
   max-width: 830px;
 }
 
+@media screen and (max-width: 992px) {
+  #heroSection .heroSection .hero {
+    display: block;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #heroSection .heroSection .hero {
+    max-width: 100%;
+  }
+}
+
 #heroSection .heroSection .hero:after {
   content: "";
   background-color: #FFF;
@@ -454,6 +514,15 @@ body {
   line-height: 60px;
 }
 
+@media screen and (max-width: 992px) {
+  #heroSection .heroSection .hero .tagline {
+    font-size: 20px;
+    z-index: 1;
+    position: relative;
+    line-height: normal;
+  }
+}
+
 #heroSection .heroSection .hero .headline {
   top: 0;
   right: 0;
@@ -461,6 +530,16 @@ body {
   color: #74c7d5;
   z-index: 2;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 992px) {
+  #heroSection .heroSection .hero .headline {
+    font-size: 40px;
+    position: relative;
+    line-height: normal;
+    text-align: right;
+    margin: 0;
+  }
 }
 
 .sliderbg {
@@ -517,9 +596,21 @@ body {
   font-weight: lighter;
 }
 
+@media screen and (max-width: 992px) {
+  .servicesSection h2 {
+    font-size: 30px;
+  }
+}
+
 .servicesSection .subtitle {
   font-size: 20px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  .servicesSection .subtitle {
+    font-size: 16px;
+  }
 }
 
 .servicesSection .subtitle span {
@@ -549,6 +640,15 @@ body {
           box-shadow: 0px 0px 0px 5px #FFF;
   text-align: center;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .servicesSection .items i.fa {
+    font-size: 46px;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
 }
 
 .servicesSection .items h4 {
@@ -598,6 +698,12 @@ body {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 992px) {
+  .teamSection h2 {
+    font-size: 30px;
+  }
+}
+
 .teamSection .subtitle {
   font-size: 20px;
   text-transform: uppercase;
@@ -632,6 +738,15 @@ body {
   margin-bottom: 20px;
   overflow: hidden;
   color: #4c3f4b;
+}
+
+@media screen and (max-width: 992px) {
+  .teamSection .items .item i.fa-user {
+    font-size: 46px;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
 }
 
 .teamSection .items .item:hover {
@@ -724,6 +839,12 @@ body {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 992px) {
+  .workSection h2 {
+    font-size: 30px;
+  }
+}
+
 .workSection .subtitle {
   font-size: 20px;
   text-transform: uppercase;
@@ -762,6 +883,18 @@ body {
   padding: 20px 0;
 }
 
+@media screen and (max-width: 992px) {
+  .workSection .button-group {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .workSection .button-group .title {
+    margin-bottom: 10px;
+  }
+}
+
 .workSection .button-group:after {
   content: '';
   display: block;
@@ -793,6 +926,12 @@ body {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 992px) {
+  .workSection .element-item {
+    height: 300px;
+  }
+}
+
 .workSection .element-item .box {
   background: #FFF;
   border-radius: 5px;
@@ -802,6 +941,12 @@ body {
 .workSection .element-item .box img {
   max-width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .workSection .element-item .box img {
+    width: 100%;
+  }
 }
 
 .workSection .element-item .box h4 {
@@ -859,6 +1004,12 @@ body {
   font-size: 60pt;
   font-weight: lighter;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+  .contactsSection h2 {
+    font-size: 30px;
+  }
 }
 
 .contactsSection .subtitle {
