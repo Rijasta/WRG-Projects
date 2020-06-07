@@ -1138,6 +1138,15 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 992px) {
+  .contactsSection .footerSocial a i.fa {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
 .contactsSection .footerSocial a:hover, .contactsSection .footerSocial a:focus, .contactsSection .footerSocial a:active {
   color: #FFF;
 }

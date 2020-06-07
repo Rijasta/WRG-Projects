@@ -205,6 +205,13 @@ $green: #81a256;
                 margin: 20px;
                 font-size: 30px;
                 text-align: center;
+
+                @include mdmax {
+                    font-size: 20px;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                }
             }
 
             &:hover,
