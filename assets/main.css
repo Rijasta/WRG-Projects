@@ -341,8 +341,8 @@ body {
       align-content: center;
   height: 10vh;
   z-index: 1;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#2c3e50));
-  background: linear-gradient(to top, rgba(255, 255, 255, 0), #2c3e50);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 62, 80, 0)), to(#2c3e50));
+  background: linear-gradient(to top, rgba(44, 62, 80, 0), #2c3e50);
   position: fixed;
   width: 100%;
   left: 0;
@@ -960,20 +960,11 @@ body {
 }
 
 .contactsSection {
-  height: 100%;
+  height: auto;
   width: 100%;
   background-color: #75b4aa;
   color: #FFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10vh 0;
+  padding: 10vh 0 0;
   position: relative;
   /* ---- button ---- */
   /* ---- button-group ---- */
@@ -993,6 +984,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   z-index: 0;
+  top: 0;
 }
 
 .contactsSection * {
@@ -1010,6 +1002,27 @@ body {
   .contactsSection h2 {
     font-size: 30px;
   }
+}
+
+.contactsSection h5 {
+  font-size: 30px;
+}
+
+.contactsSection input,
+.contactsSection textarea {
+  background-color: #68a097;
+  height: 40px;
+  color: #FFF;
+  border: 0px;
+}
+
+.contactsSection .btn.btn-primary {
+  background-color: #df5c64;
+  border: #b24a50;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 20px;
+  width: 200px;
 }
 
 .contactsSection .subtitle {
@@ -1100,6 +1113,37 @@ body {
 .contactsSection .element-item > * {
   margin: 0;
   padding: 0;
+}
+
+.contactsSection .footerSocial {
+  background-color: #68a097;
+  padding: 30px 0;
+  position: relative;
+  margin-top: 50px;
+}
+
+.contactsSection .footerSocial a {
+  color: #FFF;
+}
+
+.contactsSection .footerSocial a i.fa {
+  background-color: #75b4aa;
+  padding: 0px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.contactsSection .footerSocial a:hover, .contactsSection .footerSocial a:focus, .contactsSection .footerSocial a:active {
+  color: #FFF;
+}
+
+.contactsSection .footerSocial a:hover i, .contactsSection .footerSocial a:focus i, .contactsSection .footerSocial a:active i {
+  background-color: #b24a50;
 }
 
 .navigation nav ul {

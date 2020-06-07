@@ -7,14 +7,12 @@ $green: #81a256;
 
 .contactsSection {
 
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: $blue;
     color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10vh 0;
+
+    padding: 10vh 0 0;
     position: relative;
 
     &::after {
@@ -27,6 +25,7 @@ $green: #81a256;
         background-attachment: fixed;
         background-size: cover;
         z-index: 0;
+        top: 0;
     }
 
     * {
@@ -44,6 +43,28 @@ $green: #81a256;
             font-size: 30px;
             ;
         }
+    }
+
+    h5 {
+        font-size: 30px;
+    }
+
+    input,
+    textarea {
+        background-color: #68a097;
+        height: 40px;
+        color: #FFF;
+        border: 0px;
+    }
+
+    .btn.btn-primary {
+        background-color: #df5c64;
+        border: $red;
+        text-transform: uppercase;
+        margin: 0 auto;
+        font-size: 20px;
+        width: 200px;
+
     }
 
     .subtitle {
@@ -165,5 +186,38 @@ $green: #81a256;
         padding: 0;
     }
 
+    .footerSocial {
+        background-color: #68a097;
+        padding: 30px 0;
+        position: relative;
+        margin-top: 50px;
+
+        a {
+            color: #FFF;
+
+            i.fa {
+                background-color: $blue;
+                padding: 0px;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                margin: 20px;
+                font-size: 30px;
+                text-align: center;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #FFF;
+
+                i {
+                    background-color: $red;
+                }
+            }
+        }
+
+    }
 
 }
