@@ -1,3 +1,17 @@
 @import "root";
-@import "mixin";
 @import "header";
+@import "hero";
+
+
+
+
+.navigation {
+    nav {
+        ul {
+            display: grid;
+            grid-template-columns: 25%;
+
+        }
+    }
+
+}
