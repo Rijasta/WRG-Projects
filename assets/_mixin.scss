@@ -12,6 +12,11 @@ $mlg: 1100px;
 $lg: 1200px;
 $mxl: 1300px;
 
+@mixin bg-opacity($color, $opacity) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
 @mixin smmin {
     @media screen and (min-width: #{$sm}) {
         @content;

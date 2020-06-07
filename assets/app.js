@@ -1,4 +1,5 @@
 const hero = document.querySelector('.hero');
+const headerSection = document.querySelector('.headerSection');
 const sliderbg = document.querySelector('.sliderbg');
 const logo = document.querySelector('.logo');
 const hamburder = document.querySelector('.hamburger');
@@ -47,9 +48,15 @@ tl.fromTo(hero, 1, {
         opacity: "1",
         ease: Power2.easeInOut
     }, "-=0.3")
+    .fromTo(headerSection, 1.2, {
+        y: "-200"
+    }, {
+        y: "0",
+        ease: Power2.easeInOut
+    })
     .fromTo(logo, 0.5, {
         opacity: "0",
-        y: "-20"
+        y: "-60"
     }, {
         opacity: 1,
         y: 0
@@ -73,8 +80,8 @@ tl.staggerFromTo(".navigation li", 1, {
 
 // heroSection Slider
 
-//ScrollMagic
-const ctrl = new ScrollMagic.Controller();
+// //ScrollMagic
+var ctrl = new ScrollMagic.Controller();
 
 // Create scenes in jQuery each() loop
 $(".MainPage section").each(function (i) {
@@ -83,37 +90,33 @@ $(".MainPage section").each(function (i) {
     // const outer = $(this).find(".outer");
     const title = this.querySelector("h2");
     const subtitle = this.querySelector("h4");
-    const paragraph = this.querySelector(".paraBlock");
-    const item = this.querySelector(".item");
+    const paragraph = this.querySelector("p");
+    const item = this.querySelector(".staggerItems");
     const img = this.querySelector("img");
-    const t2 = new TimelineMax();
-    t2.fromTo(title, 3, {
+    const tb = new TimelineMax();
+    tb.fromTo(title, 0.5, {
             opacity: 0,
             y: 10
         }, {
             y: 0,
             opacity: 1
         })
-        .fromTo(subtitle, 2, {
+        .fromTo(subtitle, 0.2, {
             opacity: 0,
             y: 10
         }, {
             opacity: 1,
             y: 0
         })
-        .fromTo(img, 0.1, {
-            opacity: 0
-        }, {
-            opacity: 1
-        })
-        .fromTo(paragraph, 0.1, {
+
+        .fromTo(paragraph, 0.2, {
             opacity: 0,
             y: 10
         }, {
             opacity: 1,
             y: 0
         })
-        .staggerFromTo(item, 0.1, {
+        .staggerFromTo(item, 0.3, {
             opacity: 0,
             y: 10
         }, {
@@ -131,7 +134,7 @@ $(".MainPage section").each(function (i) {
             triggerElement: this,
             triggerHook: 0.80
         })
-        .setTween(t2)
+        .setTween(tb)
         .addIndicators({
             colorTrigger: "white",
             colorStart: "white",
@@ -142,60 +145,47 @@ $(".MainPage section").each(function (i) {
         .addTo(ctrl);
 });
 
-// Select all links with hashes
-$('a[href*="#"]')
-    // Remove links that don't actually link to anything
-    .not('[href="#"]')
-    .not('[href="#0"]')
-    .click(function (event) {
-        // On-page links
-        if (
-            location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') &&
-            location.hostname === this.hostname
-        ) {
-            // Figure out element to scroll to
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
-            if (target.length) {
-                // Only prevent default if animation is actually gonna happen
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top - 100
-                }, 100, function () {
-                    // Callback after animation
-                    // Must change focus!
-                    var $target = $(target);
-                    $target.focus();
-                    if ($target.is(":focus")) { // Checking if the target was focused
-                        return false;
-                    } else {
-                        $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                        $target.focus(); // Set focus again
-                    }
-                });
-            }
-        }
+
+
+//ISotope
+
+// external js: isotope.pkgd.js
+
+// init Isotope
+// external js: isotope.pkgd.js
+
+// init Isotope
+var $grid = $('.grid').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows'
+});
+// filter functions
+var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function () {
+        var number = $(this).find('.number').text();
+        return parseInt(number, 10) > 50;
+    },
+    // show if name ends with -ium
+    ium: function () {
+        var name = $(this).find('.name').text();
+        return name.match(/ium$/);
+    }
+};
+// bind filter button click
+$('.filters-button-group').on('click', 'button', function () {
+    var filterValue = $(this).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[filterValue] || filterValue;
+    $grid.isotope({
+        filter: filterValue
     });
-
-
-// Add opacity class to site header
-
-// jQuery(document).on('scroll', function () {
-//     if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
-//         $('#return-to-top').fadeIn(200); // Fade in the arrow
-//     } else {
-//         $('#return-to-top').fadeOut(200); // Else fade out the arrow
-//     }
-//     if (jQuery(document).scrollTop() >= 300) {
-//         jQuery('#site-header').addClass('fixed');
-//     } else {
-//         jQuery('#site-header').removeClass('fixed');
-//     }
-
-// });
-$('#return-to-top').click(function () { // When arrow is clicked
-    $('body,html').animate({
-        scrollTop: 0 // Scroll to top of body
-    }, 500);
+});
+// change is-checked class on buttons
+$('.button-group').each(function (i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function () {
+        $buttonGroup.find('.is-checked').removeClass('is-checked');
+        $(this).addClass('is-checked');
+    });
 });

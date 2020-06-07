@@ -1,14 +1,17 @@
 $red: #b24a50;
+$darkred: #c8535a;
 
 .servicesSection {
 
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: $red;
     color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10vh 0;
+    position: relative;
 
     &::after {
         content: "";
@@ -19,11 +22,13 @@ $red: #b24a50;
         background: url(../images/servicesLayer.png) no-repeat top center;
         background-attachment: fixed;
         background-size: cover;
-        z-index: 0;
+        z-index: 1;
+        left: 0;
+        top: 0;
     }
 
     * {
-        z-index: 1;
+        z-index: 2;
     }
 
     h2 {
@@ -47,7 +52,8 @@ $red: #b24a50;
         margin-top: 5vh;
 
         .item {
-            background-color: #c8535a;
+            @include bg-opacity($darkred,
+                0.6);
             padding: 5vh 2vw;
         }
 

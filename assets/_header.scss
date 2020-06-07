@@ -3,17 +3,21 @@
     color: #FFF;
     align-content: center;
     height: 10vh;
-    position: relative;
     z-index: 1;
     background: linear-gradient(to top, rgba(255, 255, 255, 0), #2c3e50);
-    position: absolute;
+    position: fixed;
     width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
 
     .navbar-brand {
         color: #FFF;
         font-size: 5em;
         font-family: 'Damion', cursive;
         opacity: 0;
+        padding-top: 0;
+        line-height: normal;
     }
 
     .navigation {

@@ -340,12 +340,14 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
   height: 10vh;
-  position: relative;
   z-index: 1;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#2c3e50));
   background: linear-gradient(to top, rgba(255, 255, 255, 0), #2c3e50);
-  position: absolute;
+  position: fixed;
   width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 99;
 }
 
 .headerSection .navbar-brand {
@@ -353,6 +355,8 @@ body {
   font-size: 5em;
   font-family: 'Damion', cursive;
   opacity: 0;
+  padding-top: 0;
+  line-height: normal;
 }
 
 .headerSection .navigation {
@@ -417,6 +421,7 @@ body {
   padding: 20px;
   border-radius: 5px;
   position: relative;
+  max-width: 830px;
 }
 
 #heroSection .heroSection .hero:after {
@@ -470,7 +475,7 @@ body {
 }
 
 .servicesSection {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #b24a50;
   color: #FFF;
@@ -483,6 +488,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10vh 0;
+  position: relative;
 }
 
 .servicesSection::after {
@@ -495,11 +502,13 @@ body {
   background: url(../images/servicesLayer.png) no-repeat top center;
   background-attachment: fixed;
   background-size: cover;
-  z-index: 0;
+  z-index: 1;
+  left: 0;
+  top: 0;
 }
 
 .servicesSection * {
-  z-index: 1;
+  z-index: 2;
 }
 
 .servicesSection h2 {
@@ -522,7 +531,8 @@ body {
 }
 
 .servicesSection .items .item {
-  background-color: #c8535a;
+  background: #c8535a;
+  background: rgba(200, 83, 90, 0.6);
   padding: 5vh 2vw;
 }
 
@@ -544,6 +554,261 @@ body {
 .servicesSection .items h4 {
   text-transform: uppercase;
   font-size: 3ex;
+}
+
+.teamSection {
+  height: 100%;
+  width: 100%;
+  background-color: #665464;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10vh 0;
+  position: relative;
+}
+
+.teamSection::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+  position: absolute;
+  background: url(../images/teamLayer.jpg) no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 0;
+}
+
+.teamSection * {
+  z-index: 1;
+}
+
+.teamSection h2 {
+  color: #FFF;
+  font-size: 60pt;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.teamSection .subtitle {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.teamSection .subtitle span {
+  color: #ec9da2;
+}
+
+.teamSection .items {
+  margin-top: 5vh;
+}
+
+.teamSection .items .item {
+  background: #4c3f4b;
+  background: rgba(76, 63, 75, 0.6);
+  padding: 5vh 2vw;
+}
+
+.teamSection .items .item i.fa-user {
+  color: #b24a50;
+  background-color: #FFF;
+  font-size: 180px;
+  padding: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  border: 2px solid #FFF;
+  -webkit-box-shadow: 0px 0px 0px 5px #a1859e;
+          box-shadow: 0px 0px 0px 5px #a1859e;
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: #4c3f4b;
+}
+
+.teamSection .items .item:hover {
+  cursor: pointer;
+}
+
+.teamSection .items .item:hover i.fa-user {
+  -webkit-box-shadow: 0px 0px 0px 5px #b24a50;
+          box-shadow: 0px 0px 0px 5px #b24a50;
+  color: #b24a50;
+}
+
+.teamSection .items .item:hover p {
+  color: #b24a50;
+}
+
+.teamSection .items .item h4 {
+  text-transform: uppercase;
+  font-size: 3ex;
+}
+
+.teamSection .items .item p {
+  color: #a1ca6c;
+}
+
+.teamSection .items .item .socialIcons a {
+  color: #FFF;
+}
+
+.teamSection .items .item .socialIcons a i.fa {
+  background-color: #a1859e;
+  padding: 8px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.teamSection .items .item .socialIcons a:hover, .teamSection .items .item .socialIcons a:focus, .teamSection .items .item .socialIcons a:active {
+  color: #FFF;
+}
+
+.teamSection .items .item .socialIcons a:hover i, .teamSection .items .item .socialIcons a:focus i, .teamSection .items .item .socialIcons a:active i {
+  background-color: #b24a50;
+}
+
+.workSection {
+  height: 100%;
+  width: 100%;
+  background-color: #81a256;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10vh 0;
+  position: relative;
+  /* ---- button ---- */
+  /* ---- button-group ---- */
+  /* ---- grid ---- */
+  /* clear fix */
+  /* ---- .element-item ---- */
+}
+
+.workSection::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+  position: absolute;
+  background: url(../images/workLayer.jpg) no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 0;
+}
+
+.workSection * {
+  z-index: 1;
+}
+
+.workSection h2 {
+  color: #FFF;
+  font-size: 60pt;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.workSection .subtitle {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.workSection .subtitle span {
+  color: #ec9da2;
+}
+
+.workSection .button {
+  display: block;
+  padding: 0.5em 1.0em;
+  border: none;
+  border-radius: 7px;
+  color: #FFF;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.workSection .button:hover,
+.workSection .button:focus {
+  background-color: #81a256;
+  color: #FFF;
+  outline: 0;
+}
+
+.workSection .button:active,
+.workSection .button.is-checked {
+  background-color: #f5c149;
+}
+
+.workSection .button.is-checked {
+  color: white;
+}
+
+.workSection .button-group {
+  border: solid #FFF;
+  border-width: 1px 0;
+  text-align: right;
+  padding: 20px 0;
+}
+
+.workSection .button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.workSection .button-group .button {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+  display: inline-block;
+}
+
+.workSection .grid {
+  max-width: 1200px;
+}
+
+.workSection .grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.workSection .element-item {
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 10px;
+  background: #888;
+  color: #262524;
+}
+
+.workSection .element-item img {
+  width: 100%;
+  height: auto;
+}
+
+.workSection .element-item > * {
+  margin: 0;
+  padding: 0;
 }
 
 .navigation nav ul {
