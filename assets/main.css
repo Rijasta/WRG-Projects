@@ -744,19 +744,14 @@ body {
   cursor: pointer;
 }
 
-.workSection .button:hover,
-.workSection .button:focus {
+.workSection .button:hover, .workSection .button:focus {
   background-color: #81a256;
   color: #FFF;
   outline: 0;
 }
 
-.workSection .button:active,
-.workSection .button.is-checked {
+.workSection .button:active, .workSection .button.is-checked {
   background-color: #f5c149;
-}
-
-.workSection .button.is-checked {
   color: white;
 }
 
@@ -792,18 +787,26 @@ body {
 
 .workSection .element-item {
   position: relative;
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  padding: 10px;
-  background: #888;
+  margin-top: 20px;
+  height: 240px;
   color: #262524;
+  border-radius: 5px;
 }
 
-.workSection .element-item img {
-  width: 100%;
+.workSection .element-item .box {
+  background: #FFF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.workSection .element-item .box img {
+  max-width: 100%;
   height: auto;
+}
+
+.workSection .element-item .box h4 {
+  padding: 10px;
+  text-align: center;
 }
 
 .workSection .element-item > * {

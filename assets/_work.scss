@@ -70,23 +70,23 @@ $green: #81a256;
         font-size: 16px;
         background-color: transparent;
         cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: $green;
+            color: #FFF;
+            outline: 0;
+        }
+
+        &:active,
+        &.is-checked {
+            background-color: #f5c149;
+            color: white;
+        }
     }
 
-    .button:hover,
-    .button:focus {
-        background-color: $green;
-        color: #FFF;
-        outline: 0;
-    }
 
-    .button:active,
-    .button.is-checked {
-        background-color: #f5c149;
-    }
 
-    .button.is-checked {
-        color: white;
-    }
 
 
 
@@ -117,7 +117,6 @@ $green: #81a256;
 
     .grid {
         max-width: 1200px;
-
     }
 
     /* clear fix */
@@ -131,18 +130,29 @@ $green: #81a256;
 
     .element-item {
         position: relative;
-        float: left;
-        width: 100px;
-        height: 100px;
-        margin: 5px;
-        padding: 10px;
-        background: #888;
+        margin-top: 20px;
+        height: 240px;
         color: #262524;
+        border-radius: 5px;
 
-        img {
-            width: 100%;
-            height: auto;
+
+        .box {
+            background: #FFF;
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            h4 {
+                padding: 10px;
+                text-align: center;
+            }
         }
+
+
     }
 
     .element-item>* {
