@@ -1,11 +1,12 @@
 # WRG-Projects
 
 White Rabbit Group Project
-Hi, This is my Project test for Frontend Lead
+Hi, This is my Project for Frontend Lead
 
 # Plugins
 
-Bootstrap
-GSAP
-ScrollMagic
-Masonry
+<ul><li>Bootstrap</li>
+<li>GSAP</li>
+<li>ScrollMagic</li>
+<li>Masonry</li>
+</ul>
