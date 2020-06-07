@@ -374,7 +374,7 @@ body {
 }
 
 .headerSection .navigation li a {
-  line-height: 40px;
+  line-height: 90px;
   color: #FFF;
   padding: 40px 25px 10px;
   border-radius: 0px 0 5px 5px;
@@ -810,6 +810,143 @@ body {
 }
 
 .workSection .element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+.contactsSection {
+  height: 100%;
+  width: 100%;
+  background-color: #75b4aa;
+  color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10vh 0;
+  position: relative;
+  /* ---- button ---- */
+  /* ---- button-group ---- */
+  /* ---- grid ---- */
+  /* clear fix */
+  /* ---- .element-item ---- */
+}
+
+.contactsSection::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+  position: absolute;
+  background: url(../images/contactsLayer.jpg) no-repeat top center;
+  background-attachment: fixed;
+  background-size: cover;
+  z-index: 0;
+}
+
+.contactsSection * {
+  z-index: 1;
+}
+
+.contactsSection h2 {
+  color: #FFF;
+  font-size: 60pt;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.contactsSection .subtitle {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.contactsSection .subtitle span {
+  color: #ec9da2;
+}
+
+.contactsSection .button {
+  display: block;
+  padding: 0.5em 1.0em;
+  border: none;
+  border-radius: 7px;
+  color: #FFF;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.contactsSection .button:hover, .contactsSection .button:focus {
+  background-color: #81a256;
+  color: #FFF;
+  outline: 0;
+}
+
+.contactsSection .button:active, .contactsSection .button.is-checked {
+  background-color: #f5c149;
+  color: white;
+}
+
+.contactsSection .button-group {
+  border: solid #FFF;
+  border-width: 1px 0;
+  text-align: right;
+  padding: 20px 0;
+}
+
+.contactsSection .button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.contactsSection .button-group .button {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 1px;
+  display: inline-block;
+}
+
+.contactsSection .grid {
+  max-width: 1200px;
+}
+
+.contactsSection .grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.contactsSection .element-item {
+  position: relative;
+  margin-top: 20px;
+  height: 240px;
+  color: #262524;
+  border-radius: 5px;
+}
+
+.contactsSection .element-item .box {
+  background: #FFF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.contactsSection .element-item .box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contactsSection .element-item .box h4 {
+  padding: 10px;
+  text-align: center;
+}
+
+.contactsSection .element-item > * {
   margin: 0;
   padding: 0;
 }
